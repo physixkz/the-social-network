@@ -5,21 +5,26 @@ const UserSchema = new Schema(
     username: {
       type: String,
       unique: true,
+      required: true,
       trim: true,
-      required: "Username is Required",
     },
 
     email: {
       type: String,
+      required: true,
       unique: true,
-      required: "Username is Required",
-      match: [/.+@.+\..+/],
+      validate: {
+        validator: function (value) {
+          return /.+@.+\..+/.test(value);
+        },
+        message: "Email must be in a valid format",
+      },
     },
 
-    posts: [
+    thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Post",
+        ref: "Thought",
       },
     ],
 
