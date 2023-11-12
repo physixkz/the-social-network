@@ -54,19 +54,32 @@ Explore the API to see all available endpoints.
 ## API Endpoints
 
 POST /api/users
+
 GET /api/users
+
 GET /api/users/:id
+
 PUT /api/users/:id
+
 DELETE /api/users/:id
+
 POST /api/users/:userId/friends/:friendId
+
 DELETE /api/users/:userId/friends/:friendId
-GET /api/posts
-GET /api/posts/:id
-POST /api/posts
-PUT /api/posts/:id
-DELETE /api/posts/:id
-POST /api/posts/:postId/reactions
-DELETE /api/posts/:postId/reactions/:reactionId
+
+GET /api/thought
+
+GET /api/thought/:id
+
+POST /api/thought
+
+PUT /api/thought/:id
+
+DELETE /api/thought/:id
+
+POST /api/thought/:thoughtId/reactions
+
+DELETE /api/thought/:thoughtId/reactions/:reactionId
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
